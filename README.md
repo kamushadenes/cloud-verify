@@ -6,9 +6,9 @@ Cryptographically attest if your Go application is being executed within a cloud
 
 ## Supported Cloud Providers
 
-- AWS
-- Google Cloud
-- Azure
+- [Azure](https://learn.microsoft.com/en-us/azure/virtual-machines/instance-metadata-service?tabs=linux#sample-1-validate-that-the-vm-is-running-in-azure)
+- [AWS](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/verify-pkcs7.html)
+- [Google Cloud](https://cloud.google.com/compute/docs/instances/verifying-instance-identity)
 
 ## Dependencies
 
