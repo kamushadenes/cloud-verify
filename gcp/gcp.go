@@ -19,7 +19,7 @@ type GCPVerifier struct {
 
 func NewGCPVerifier() *GCPVerifier {
 	return &GCPVerifier{
-		Audience: fmt.Sprintf("https://foo.bar/%s", uuid.NewString()),
+		Audience: fmt.Sprintf("https://cloud.verify/%s", uuid.NewString()),
 	}
 }
 

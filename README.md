@@ -1,20 +1,24 @@
-# cloud-verify
+# Cloud-Verify
 
-## Description
+## Overview
 
-Cryptographically attest if your Go application is being executed within a cloud environment.
+Cloud-Verify is a Go library that provides cryptographic attestation to verify if your application is running within a cloud environment. It supports multiple cloud providers and is easy to integrate into your existing Go applications.
 
 ## Supported Cloud Providers
 
-- [Azure](https://learn.microsoft.com/en-us/azure/virtual-machines/instance-metadata-service?tabs=linux#sample-1-validate-that-the-vm-is-running-in-azure)
-- [AWS](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/verify-pkcs7.html)
-- [Google Cloud](https://cloud.google.com/compute/docs/instances/verifying-instance-identity)
+Cloud-Verify currently supports the following cloud providers:
 
-## Dependencies
+- [Amazon Web Services (AWS)](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/verify-pkcs7.html)
+- [Microsoft Azure](https://learn.microsoft.com/en-us/azure/virtual-machines/instance-metadata-service?tabs=linux#sample-1-validate-that-the-vm-is-running-in-azure)
+- [Google Cloud Platform (GCP)](https://cloud.google.com/compute/docs/instances/verifying-instance-identity)
 
-You need the `openssl` binary installed and available in the `PATH`.
+## Prerequisites
 
-## Usage
+For AWS and Azure, ensure that the `openssl` binary is installed and available in your system's `PATH`. This prerequisite is not required for GCP.
+
+## How to Use
+
+Here is a simple example of how to use Cloud-Verify in your Go application:
 
 ```go
 package main
@@ -25,11 +29,11 @@ import (
 )
 
 func main() {
-	if v, cloud := cloudverify.RunningOnCloud(); v {
-		fmt.Printf("Running on Cloud (%s)\n", cloud)
-	} else {
-		fmt.Printf("Not running on Cloud (%s)\n", cloud)
-	}
+ if v, cloud := cloudverify.RunningOnCloud(); v {
+  fmt.Printf("Running on Cloud (%s)\n", cloud)
+ } else {
+  fmt.Printf("Not running on Cloud (%s)\n", cloud)
+ }
 }
 ```
 

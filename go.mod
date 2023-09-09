@@ -4,7 +4,6 @@ go 1.20
 
 require (
 	github.com/google/uuid v1.3.0
-	go.mozilla.org/pkcs7 v0.0.0-20210826202110-33d05740a352
 	google.golang.org/api v0.132.0
 )
 
