@@ -70,7 +70,7 @@ jobs:
 
   hash:
     runs-on: ubuntu-latest
-    needs: [build, build-with-enclave]
+    needs: [build]
 
     steps:
       - name: Download all artifacts
