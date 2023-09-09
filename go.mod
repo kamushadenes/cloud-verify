@@ -3,7 +3,7 @@ module github.com/kamushadenes/cloud-verify
 go 1.20
 
 require (
-	github.com/google/uuid v1.3.0
+	github.com/google/uuid v1.3.1
 	google.golang.org/api v0.132.0
 )
 
