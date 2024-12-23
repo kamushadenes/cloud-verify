@@ -4,7 +4,7 @@ go 1.23.4
 
 require (
 	github.com/google/uuid v1.6.0
-	google.golang.org/api v0.213.0
+	google.golang.org/api v0.214.0
 )
 
 require (
