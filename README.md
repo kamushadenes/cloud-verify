@@ -37,6 +37,16 @@ func main() {
 }
 ```
 
+### Updating AWS Certificates
+
+Cloud-Verify uses the certificates present at https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/regions-certs.html to validate AWS metadata.
+
+In case those need to be updated and I haven't done so yet, you can update them manually by running the following command:
+
+```bash
+go run cmd/update-certs/main.go
+```
+
 ## License
 
 This project is licensed under the MIT License.

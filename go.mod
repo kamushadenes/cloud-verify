@@ -3,6 +3,7 @@ module github.com/kamushadenes/cloud-verify
 go 1.23.5
 
 require (
+	github.com/PuerkitoBio/goquery v1.10.1
 	github.com/google/uuid v1.6.0
 	google.golang.org/api v0.219.0
 )
@@ -11,6 +12,7 @@ require (
 	cloud.google.com/go/auth v0.14.0 // indirect
 	cloud.google.com/go/auth/oauth2adapt v0.2.7 // indirect
 	cloud.google.com/go/compute/metadata v0.6.0 // indirect
+	github.com/andybalholm/cascadia v1.3.3 // indirect
 	github.com/felixge/httpsnoop v1.0.4 // indirect
 	github.com/go-logr/logr v1.4.2 // indirect
 	github.com/go-logr/stdr v1.2.2 // indirect
