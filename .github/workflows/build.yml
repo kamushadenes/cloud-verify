@@ -24,7 +24,7 @@ jobs:
 
       - name: Upload Go test results
         if: always()
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: TestResults.json
           path: /tmp/TestResults.json
@@ -60,7 +60,7 @@ jobs:
           GOARCH: ${{ steps.get-go-env.outputs.GOARCH }}
 
       - name: Upload binary artifact
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: cloud-verify-${{ env.GOOS }}-${{ env.GOARCH }}
           path: cloud-verify-${{ env.GOOS }}-${{ env.GOARCH }}
@@ -85,7 +85,7 @@ jobs:
         run: sha256sum -b cloud-verify-* > SHA256SUMS
 
       - name: Upload SHA256SUMS file
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: SHA256SUMS
           path: SHA256SUMS
