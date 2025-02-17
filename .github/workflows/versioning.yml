@@ -6,7 +6,7 @@ on:
       - main
 
 permissions:
-  contents: write-all
+  contents: write
 
 jobs:
   versioning:
@@ -25,6 +25,4 @@ jobs:
           create_tag: true
           tag_prefix: "v"
       - name: Invoke goreleaser
-        uses: benc-uk/workflow-dispatch@v1
-        with:
-          workflow: goreleaser.yml
+        uses: ./.github/workflows/goreleaser.yml
