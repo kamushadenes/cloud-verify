@@ -24,6 +24,6 @@ jobs:
           main_branch: main
           create_tag: true
           tag_prefix: "v"
-  goreleaser:
+  release:
     needs: [versioning]
-    uses: ./.github/workflows/goreleaser.yml
+    uses: ./.github/workflows/release.yml
