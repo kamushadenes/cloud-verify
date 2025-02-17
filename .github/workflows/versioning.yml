@@ -24,3 +24,7 @@ jobs:
           main_branch: main
           create_tag: true
           tag_prefix: "v"
+      - name: Invoke goreleaser
+        uses: benc-uk/workflow-dispatch@v1
+        with:
+          workflow: goreleaser.yml
