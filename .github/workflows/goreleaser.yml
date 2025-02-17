@@ -25,6 +25,7 @@ jobs:
           create_tag: true
           tag_prefix: "v"
   goreleaser:
+    needs: [versioning]
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
