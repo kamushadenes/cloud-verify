@@ -24,5 +24,6 @@ jobs:
           main_branch: main
           create_tag: true
           tag_prefix: "v"
-      - name: Invoke goreleaser
-        uses: ./.github/workflows/goreleaser.yml
+  goreleaser:
+    needs: [versioning]
+    uses: ./.github/workflows/goreleaser.yml
