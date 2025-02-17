@@ -17,7 +17,7 @@ jobs:
       - name: Set up Go
         uses: actions/setup-go@v5
         with:
-          go-version: "1.23.5"
+          go-version: "1.23.6"
 
       - name: Run tests
         run: go test -json ./... > /tmp/TestResults.json
@@ -44,7 +44,7 @@ jobs:
       - name: Set up Go
         uses: actions/setup-go@v5
         with:
-          go-version: "1.23.5"
+          go-version: "1.23.6"
 
       - name: Get GOOS and GOARCH
         id: get-go-env
